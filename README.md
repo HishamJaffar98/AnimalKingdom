@@ -21,5 +21,8 @@ The [Build](Build) folder consists of an android apk of the game.
 - Run the APK.
 
 # Instructions and Controls
-1. Choose which model to view through the model selection section. Rotate the model to view different angles of the model.
+1. Choose which model to view through the model selection section.
+2. Rotate the model to view different angles of the model.
+3. Select a part to view more details about that part of the animal.
+4. Hold down the screen to increase the speed of the text being displayed.
 
