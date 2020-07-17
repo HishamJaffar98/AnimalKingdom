@@ -5,14 +5,21 @@ A prototype for an interactive game through which students can learn interesting
 This repository consists of four folders:- 
 
 1. [Assets](Assets)
-2. [Builds](Builds)
+2. [Build](Build)
 3. [Packages](Packages)
 4. [Project Settings](ProjectSettings)
 
-Out which the [Assets](Assets) and [Builds](Builds) are the only files to be concerned with if a user wants to understand the inner workings of the game or play the final build, respectively.
+Out of which the [Assets](Assets) and [Build](Build) are the only files to be concerned with if a user wants to understand the inner workings of the game or play the final build, respectively.
 
 ## Builds
-The [Builds](Builds) folder consists of an android apk of the game.
+The [Build](Build) folder consists of an android apk of the game.
 
-## Running the Game
-- Download the game
+# Running the Game
+
+- Download the Repository.
+- Open the [Build](Build) folder.
+- Run the APK.
+
+# Instructions and Controls
+1. Choose which model to view through the model selection section. Rotate the model to view different angles of the model.
+
