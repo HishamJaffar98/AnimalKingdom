@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7a757473a99f454987d630ea4e556d8, type: 3}
+  m_Name: PartDetails
+  m_EditorClassIdentifier: 
+  partsDetails:
+  - "A dog\u2019s level of attention can be determined by watching her ears. Erect
+    ears facing forward indicate that she\u2019s engaged, and slightly pulled-back
+    ears signal that she\u2019s feeling friendly; ears laid tightly back against
+    the head suggest a fearful or timid reaction. Dogs\u2019 ears move independently
+    of one another. Even during the quiet hours of the night, the world is a noisy
+    place for dogs, who can hear the high-frequency pulse of the crystal resonator
+    used in digital alarm clocks and bodily vibrations of termites in the walls.
+    It's difficult to examine the ears of a dog and this predisposes dogs to a variety
+    of ear ailments, including parasites and yeast infections."
+  - Dogs are capable of recognizing melanomas as well as bladder, lung, breast and
+    ovarian cancers by sniffing them out. Dog noses can be used for tracking or air
+    scenting. In tracking, dogs tend to carry their heads low so as to detect the
+    scent of broken vegetation, while in air scenting, dogs will instead carry their
+    heads high considering that they are after the lighter, more volatile compounds
+    left behind by humans. Wet noses play a primary role in detecting smell. Having
+    a wet nose helps dogs capture tiny scent particles which increases a dog's ability
+    to detect the smells. Nose touches in dogs may help in transmitting information
+    from one dog to another.
+  - "The tail is an extension of the spine, but it\u2019s far more flexible. It\u2019s
+    also more exposed and active, so there\u2019s a greater chance of injury. A dog\u2019s
+    tail has its own set of muscles, anchors, and discs. Some dogs are able to use
+    their tails as a rudder in the water, and Retriever breeds are especially good
+    at this. The left brain controls the right side of the body, and the right brain
+    controls the left side of the body. So positive feelings pull a dog\u2019s tail
+    to the right and negative feelings pull it to the left. Tail shaking is an acquired
+    skill puppies learn when they are old enough to start communicating. "
+  - Deer antlers can grow up to an inch a day, making their tissue among the fastest
+    growing on the planet. Antlers start growing in springtime and continue gaining
+    size through late summer. By fall, antlers are full grown and begin to harden.
+    Many people assume deer antlers are of a keratin material similar to animal horns,
+    but deer antlers consist of bone that grows in an open honeycomb style. Most
+    biologists believe that antler growth does more than protect deer from predators.
+    Deer also use their antlers to compete with other males for mating rights with
+    females and also to show dominance in areas where food sources are available.
+  - "The trunk of the deer is attached to the legs, neck and tail. The trunk is the
+    part of the body that holds the deer\u2019s spinal cord, heart, stomach, kidney,
+    liver, lungs and intestines, among other vital organs. Depending upon the species,
+    the color of the trunk can be one color or have spots throughout the hair. The
+    tail is attached to the back of the trunk, covering the deer\u2019s anus. When
+    frightened, white-tailed deer hold their tails straight up, revealing the white
+    pattern they possess underneath, which is a sign to other deer that danger is
+    present. Food goes into the animal's first stomach chamber called the rumen."
+  - A deer foot consists of two elongated toes. They walk, run, and jump on their
+    third and fourth phalanges. Each toe is capped by a hard, horny toenail that
+    we call the hoof. It's made of keratin, that same material that forms our fingernails.
+    A clean, healthy hoof is an elegant structure. The black outer nail is hard and
+    strong. It absorbs the shock of every stride and provides traction on soft and
+    wet surfaces. It's also a formidable weapon. The inner portion of the hoof is
+    softer, but still quite tough. It provides a cushion and traction on harder surfaces.
+    In deep mud or snow, dew claws broaden the foot's platform and show up in a deer
+    track.
+  - Mature male orangutans have large flappy cheek-pads, known as flanges. As soon
+    as males begin to develop bigger cheek pads, their testosterone levels peak.
+    These large cheek pads or flanges demarcate a distinct difference between fully
+    mature males and females. Male orangutans have two developmental stages (1) sub
+    adult males and (2) fully adult males. Sub adult males are usually thinner, lack
+    the long hair that mature males possess, do not have cheek pads or flanges (they
+    are unflanged), and they do not have overly large throat sacs.  These secondary
+    sexual characteristics are attractive to adult females and aid males in obtaining
+    mates.
+  - "Their arms are longer than their bowed legs, and their hands are much like human
+    hands. Their arms are used to employ a \"hookgrip\". Since orangutans primarily
+    move through the forest using their arms and shoulders as opposed to their legs
+    and hips, their shoulders are wider than their hips. When on the ground, they
+    walk on all fours, using their palms or their fists. Because orangutans spend
+    most of their time in trees, their long arms, fingers and toes are quite useful
+    as they swing from branch to branch. An orangutan\u2019s arm-span is longer than
+    its height. A male\u2019s arm-span can reach 7 feet (2 meters) from fingertip
+    to fingertip."
+  - Orangutan toes are long and curved to help hold and quickly release branches
+    as they traverse the treetops. The big toe of orangutans oppose the other digits,
+    enabling them to grasp and manipulate objects. The opposable big toes are small
+    in size so they do not hinder swinging through the forest. Orangutan feet are
+    adapted for climbing trees. Their feet grasp branches and serve as an extra support,
+    in addition to their hands, when hanging upside-down. Orangutans can hold, eat,
+    and manipulate food using their hands or just their feet. This agility allows
+    them to even place a foot in their mouth while hanging from a branch.
