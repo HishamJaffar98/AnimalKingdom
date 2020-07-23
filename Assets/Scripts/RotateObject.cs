@@ -16,7 +16,6 @@ public class RotateObject : MonoBehaviour
 
     void Update()
     {
-        print(showDetails.IsViewingOrgan);
         if(showDetails.IsViewingOrgan==true)
         {
             return;

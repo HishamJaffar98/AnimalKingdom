@@ -7,6 +7,11 @@ using UnityEngine;
 public class PartDetails : ScriptableObject
 {
     [SerializeField] string[] partsDetails;
+
+    void Start()
+    {
+        
+    }
     
     public string[] PartsDetails
     {

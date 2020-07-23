@@ -18,8 +18,12 @@ public class ShowDetails : MonoBehaviour
     [SerializeField] GameObject buttonsContainer;
     [SerializeField] GameObject informationPanel;
     [SerializeField] GameObject modelSelectionButton;
-
     [SerializeField] GameObject[] models;
+
+
+    [Header("Narration Clips")]
+    [SerializeField] AudioClip[] narrationClips;
+
 
     string[] partDetails;
     Coroutine co;
@@ -31,6 +35,7 @@ public class ShowDetails : MonoBehaviour
     float mainCameraFOV;
     Vector3 mainCameraOGPos;
     Vector3 mainCameraOGRot;
+    GameObject narrator;
 
     public bool IsViewingOrgan
     {
@@ -42,7 +47,8 @@ public class ShowDetails : MonoBehaviour
 
     private void Awake()
     {
-        characterDelay = 0.04f;
+        narrator = GameObject.FindGameObjectWithTag("Narrator");
+        characterDelay = 0.05f;
         mainCameraFOV = Camera.main.GetComponent<Camera>().fieldOfView;
         mainCameraOGPos = Camera.main.transform.position;
         mainCameraOGRot = Camera.main.transform.eulerAngles;
@@ -58,7 +64,6 @@ public class ShowDetails : MonoBehaviour
 
     void Update()
     {
-        print(models[0].transform.localEulerAngles.y);
         if(Input.touchCount>0)
         {
             Touch firstTouch = Input.GetTouch(0);
@@ -78,31 +83,31 @@ public class ShowDetails : MonoBehaviour
         switch(viewingOrgan)
         {
             case 1:
-                ZoomIntoOrgan(12, new Vector3(15.9f, 0, 0), 235.3f, 0);
+                ZoomIntoOrgan(235.3f, 0);
                 break;
             case 2:
-                ZoomIntoOrgan(14, new Vector3(11.9f, 0, 0), 261.8f, 0);
+                ZoomIntoOrgan(261.8f, 0);
                 break;
             case 3:
-                ZoomIntoOrgan(18, new Vector3(24.8f, 0, 0), 30.07f, 0);
+                ZoomIntoOrgan(30.07f, 0);
                 break;
             case 4:
-                ZoomIntoOrgan(19, new Vector3(6.58f, 353.58f, 0), 72.8f, 1);
+                ZoomIntoOrgan(72.8f, 1);
                 break;
             case 5:
-                ZoomIntoOrgan(20, new Vector3(18.64f, 332.95f, 348.8f), 240.8f, 1);
+                ZoomIntoOrgan(240.8f, 1);
                 break;
             case 6:
-                ZoomIntoOrgan(27, new Vector3(39.9f, 338.4f, 346.2f), 240.8f, 1);
+                ZoomIntoOrgan(240.8f, 1);
                 break;
             case 7:
-                ZoomIntoOrgan(21, new Vector3(359f, 345.12f, 349.28f), 270.78f, 2);
+                ZoomIntoOrgan(270.78f, 2);
                 break;
             case 8:
-                ZoomIntoOrgan(42, new Vector3(28.09f, 350f, 353.9f), 243.37f, 2);
+                ZoomIntoOrgan(243.37f, 2);
                 break;
             case 9:
-                ZoomIntoOrgan(20, new Vector3(33f, 326f, 338.8f), 200f, 2);
+                ZoomIntoOrgan(200f, 2);
                 break;
         }
     }
@@ -111,19 +116,26 @@ public class ShowDetails : MonoBehaviour
     {
         Camera.main.GetComponent<Camera>().fieldOfView = mainCameraFOV;
         Camera.main.transform.eulerAngles = mainCameraOGRot;
+        if (FindObjectOfType<MusicPlayer>() != null)
+        {
+            FindObjectOfType<MusicPlayer>().gameObject.GetComponent<AudioSource>().volume = 0.2f;
+        }
         HideAndShowElements(true, false);
     }
 
-    void ZoomIntoOrgan(int fov, Vector3 cameraRot, float modelRotY, int modelIndex)
+    void ZoomIntoOrgan(float modelRotY, int modelIndex)
     {
         smoothSpeed += Time.deltaTime;
-        Camera.main.gameObject.GetComponent<Camera>().fieldOfView = Mathf.Lerp(mainCameraFOV, fov, smoothSpeed);
         float step = 30 * Time.deltaTime;
-        Camera.main.transform.rotation = Quaternion.RotateTowards(Camera.main.transform.rotation, Quaternion.Euler(cameraRot), smoothSpeed*30);
         models[modelIndex].transform.localEulerAngles = new Vector3(0, Mathf.Lerp(models[modelIndex].transform.localEulerAngles.y, modelRotY, smoothSpeed), 0);
     }
     public void ProcessDetails()
     {
+        if(FindObjectOfType<MusicPlayer>()!=null)
+        {
+            FindObjectOfType<MusicPlayer>().gameObject.GetComponent<AudioSource>().volume = 0.1f;
+        }
+
         smoothSpeed = 0;
         if(buttonsContainer.activeSelf==true)
         {
@@ -191,8 +203,11 @@ public class ShowDetails : MonoBehaviour
 
     private void FillDetails(string partName, int index)
     {
+        narrator.GetComponent<AudioSource>().Stop();
         viewingOrgan = index+1;
         partNameText.text = partName;
+        narrator.GetComponent<AudioSource>().clip = narrationClips[index];
+        narrator.GetComponent<AudioSource>().Play();
         co=StartCoroutine(WaitAndTypeInfo(index));
     }
 
@@ -206,5 +221,10 @@ public class ShowDetails : MonoBehaviour
             partInfo.text += a;
             yield return new WaitForSeconds(characterDelay);
         }
+        if (FindObjectOfType<MusicPlayer>() != null)
+        {
+            FindObjectOfType<MusicPlayer>().gameObject.GetComponent<AudioSource>().volume = 0.2f;
+        }
+        
     }
 }
